@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tourism in Rural India</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+  <header>
+    <h1>Explore Rural India</h1>
+    <p>Discover hidden gems and get AI-based recommendations for your next trip.</p>
+    <button id="homeButton" onclick="goHome()">
+        <i class="fas fa-home"></i> Home
+    </button>
+  </header>
+
+  <!-- Search Section -->
+  <section id="search">
+    <input type="text" placeholder="Enter area name..." id="searchInput">
+    <button onclick="searchLocation()">Search</button>
+  </section>
+
+  <!-- Filter Section -->
+  <section id="filters">
+    <button onclick="filterCategory('all')">All</button>
+    <button onclick="filterCategory('Temple')">Temple</button>
+    <button onclick="filterCategory('Natural Attraction')">Natural Attraction</button>
+    <button onclick="filterCategory('Museum')">Museum</button>
+    <button onclick="filterCategory('Historical Place')">Historical Place</button>
+    <button onclick="filterCategory('Agricultural')">Agricultural</button>
+    <button onclick="filterCategory('Hiking')">Hiking</button>
+    <button onclick="sortByRating()">Sort by Rating</button>
+  </section>
+
+  <!-- Closest Destinations Section -->
+  <section id="results">
+    <h2>Closest Destinations Near You</h2>
+    <ul id="touristList"></ul>
+  </section>
+
+  <!-- Custom Cursor -->
+  <div class="cursor">
+    <div class="cursor-inner"></div>
+    <div class="cursor-outer"></div>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
